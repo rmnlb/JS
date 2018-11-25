@@ -1,0 +1,146 @@
+body {
+    background: darkgrey;
+    font-family: "Century Gothic", sans-serif;
+}
+
+button, .input, .description, pre {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background: white;
+    width: 80%;
+    height: 92vh;
+    margin: 10px auto;
+    padding: 15px 10px;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.todo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.task_title {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.task_container {
+    border-radius: 5px;
+    text-align: left;
+    width: 32%;
+    height: 78vh;
+    overflow-y: auto;
+    background: rgba(200, 200, 200, 0.6);
+}
+
+.task_description {
+    margin: 5px 5px 5px 20px;
+}
+
+.task_label {
+    margin: 5px;
+}
+
+.task_unit {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: hidden;
+}
+
+.newBtn {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 100, 100, .7);
+    text-align: center;
+}
+
+.popup_field {
+    width: 400px;
+    margin: 25px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px black;
+}
+
+.popup_title {
+    padding-top: 10px;
+}
+
+.input {
+    display: block;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+}
+
+.description {
+    height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.buttonbox {
+    padding-bottom: 10px;
+}
+
+.addBtn {
+    margin-right: 30px;
+}
+
+.cancelBtn {
+    margin-left: 30px;
+}
+
+.small_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.new {
+    background: lightsalmon;
+}
+
+.progress {
+    background: lightskyblue;
+}
+
+.done {
+    background: lightgreen;
+}
+
+.alarm_msg {
+    color: darkred;
+    background: rgba(255, 0, 0, 0.5);
+    font-size: 14px;
+}

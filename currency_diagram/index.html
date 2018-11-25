@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency diagram</title>
+    <style>
+        .current-table {
+            margin-left: 10px;
+            border-collapse: collapse;
+        }
+        .bordered {
+            border: 1px solid black;
+        }
+        .content {
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown_content {
+            position: absolute;
+            width: 330px;
+            background: #fff;
+            box-shadow: grey 3px 3px 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .hidden {
+            display: none;
+        }
+        .currencies-btn {
+            border: 1px solid grey;
+            width: max-content;
+        }
+        .currencies-btn:hover {
+            cursor: pointer;
+            box-shadow: 0 0 2px grey;
+        }
+        .current-label {
+            width: 75px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body onload="makeAxis()">
+    <label for="interval">Enter the period in days</label>
+    <input type="text" id="interval">
+    <label for="base_currency">Choose base currency</label>
+    <select name="base" id="base_currency">
+
+    </select>
+    <div class="dropdown">
+        <div id="currencies" class="currencies-btn">Choose currency(ies)</div>
+        <div id="curr_options" class="dropdown_content hidden"></div>
+    </div>
+    <div class="content">
+        <canvas id="canvas" class="bordered"></canvas>
+    </div>
+
+    <button onclick="generateDiagram()">Get data and show</button>
+    <table id="table" class="current-table bordered"></table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="js_base.js"></script>
+    <script src="js_diagram.js"></script>
+    </body>
+</html>

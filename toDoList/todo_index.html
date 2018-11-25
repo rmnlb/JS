@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link type="text/css" rel="stylesheet" href="./todo_style.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="title">Your ToDo list</h2>
+    <div class="todo">
+        <div id="newTasks"
+             class="task_container"
+             ondrop="drop(event)"
+             ondragover="allowDrop(event)"
+             data-description="new">
+            <h3 class="task_title">New asks</h3>
+        </div>
+        <div id="inProgress"
+             class="task_container"
+             ondrop="drop(event)"
+             ondragover="allowDrop(event)"
+             data-description="progress">
+            <h3 class="task_title">Tasks in progress</h3>
+        </div>
+        <div id="doneTasks"
+             class="task_container"
+             ondrop="drop(event)"
+             ondragover="allowDrop(event)"
+             data-description="done">
+            <h3 class="task_title">Done tasks</h3>
+        </div>
+    </div>
+    <button class="newBtn">Add task</button>
+    <div class="popup hidden">
+        <div class="popup_field">
+            <h3 class="popup_title"></h3>
+            <label> Task name:
+                <input class="input name" type="text" value="">
+            </label>
+            <label> Description:
+                <textarea class="input description"></textarea>
+            </label>
+            <div class="buttonbox">
+                <button class="addBtn">Add task</button>
+                <button class="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./todo_script.js"></script>
+</body>
+</html>
